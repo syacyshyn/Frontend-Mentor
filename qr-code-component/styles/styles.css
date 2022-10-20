@@ -13,7 +13,7 @@ img {
     width: 300px;
 }
 
-.format {
+.text-container {
     border-radius: 20px;
     margin: auto;
     background-color: hsl(0, 0%, 100%);
@@ -22,7 +22,7 @@ img {
     vertical-align: middle;
 }
 
-.format h1 {
+.text-container h1 {
     font-family: 'Outfit', sans-serif;
     font-size: x-large;
     font-weight: 700;
@@ -30,7 +30,7 @@ img {
     color: hsl(218, 44%, 22%);
 }
 
-.format p {
+.text-container p {
     font-family: 'Outfit', sans-serif;
     text-align: center;
     font-weight: 400;

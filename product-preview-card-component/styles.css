@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    padding:0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+}
+
+.component{
+    display: flex;
+    max-width: 500px;
+    max-height: 400px;
+    margin: auto;
+}
+
+.text-container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    width: 50%;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    max-height: 400px;
+}
+
+.image-container {
+    width: 50%;
+    max-height: 400px;
+}
+
+img {
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    width: 100%;
+}
+
+.perfume-title {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat:wght@500', sans-serif;
+    font-size: xx-small;
+    letter-spacing: 3px;
+
+}
+
+.perfume-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: x-large;
+    line-height: 1.4rem;
+}
+
+.perfume-description {
+    font-size: 0.875rem;
+    font-family: 'Montserrat:wght@500', sans-serif;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.25rem;
+}
+
+.large-price {
+
+}
+
+.small-price {
+
+}
+
+.prices {
+    display: flex;
+    align-content: center;
+}
