@@ -20,7 +20,6 @@ main {
 .component{
     display: flex;
     max-width: 500px;
-    max-height: 400px;
     margin: auto;
 }
 
@@ -30,15 +29,19 @@ main {
     width: 50%;
     border-top-right-radius: 0.625rem;
     border-bottom-right-radius: 0.625rem;
-    max-height: 400px;
     overflow: scroll;
     object-fit: contain;
+    max-height: 400px;
 }
 
 .image-container {
     width: 50%;
+}
+
+.image-container .text-container .component{
     max-height: 400px;
 }
+
 
 
 .perfume-image {
@@ -120,9 +123,9 @@ button >* {
         align-items: center;
     }
 
-    .component .text-container .image-container {
-        max-width: 500px;
-    }
+    /*.component .text-container .image-container {*/
+    /*    max-height: 400px*/
+    /*}*/
 
     .perfume-image {
         border-top-right-radius: .0625rem;
