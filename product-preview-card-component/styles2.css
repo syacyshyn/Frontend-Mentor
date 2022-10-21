@@ -1,0 +1,123 @@
+/***************** GLOBAL RULES *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    color: hsl(228, 12%, 48%);
+}
+
+/***************** CARD COMPONENT RULES *****************/
+
+.card-component-container {
+    max-width: 550px;
+    max-height: 400px;
+    display: flex;
+    border-radius: .9375rem;
+    background-color: white;
+}
+
+.image-container, .text-container {
+    min-width: 50%;
+    min-height: 100%;
+}
+
+
+.product-image {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    border-radius: .9735rem 0 0 .9735rem;
+}
+
+
+/***************** TEXT CONTAINER RULES *****************/
+
+
+.text-container{
+    padding: 1.5rem;
+}
+
+.product-category {
+    margin: 0;
+    letter-spacing: .21rem;
+}
+
+.text-container > .product-name {
+    line-height: 2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+.product-prices-container {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+
+.product-prices-container > .old-product-price {
+    padding-left: 1.3rem;
+}
+
+.product-prices-container > * {
+    margin: 0;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    max-height: 50px;
+    background-color:  hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .4375rem;
+    transition: background-color .4s;
+}
+
+.add-to-cart-button:hover {
+    cursor: pointer;
+    background: hsl(158, 42%, 28%);
+    box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, .9);
+}
+
+.add-to-cart-button > .add-to-cart-text {
+    padding-left: .6rem;
+    color: white;
+}
+
+.new-product-price {
+    color: hsl(158, 36%, 37%);
+}
+
+/***************** RESPONSIVE *****************/
+
+@media (max-width: 500px) {
+    .card-component-container {
+        flex-flow: column nowrap;
+        max-height: 900px;
+    }
+}
