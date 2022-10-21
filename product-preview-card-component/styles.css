@@ -1,147 +1,133 @@
+/***************** GLOBAL RULES *****************/
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100vh;
+body {
     width: 100%;
-    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
     margin: 0;
-    padding:0;
 }
 
 main {
-    display: flex;
+    width: 100%;
     height: 100%;
-    width:100%;
-    /*margin: auto;*/
+    display:flex;
     justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
 }
 
-.component{
-    display: flex;
-    max-width: 500px;
-    margin: auto;
-    background-color: hsl(0, 0%, 100%);
-}
-
-.text-container {
-    /*background-color: hsl(0, 0%, 100%);*/
-    padding: 1rem;
-    max-width: 50%;
-    width: 100%;
-    border-top-right-radius: 0.625rem;
-    border-bottom-right-radius: 0.625rem;
-    overflow: scroll;
-    object-fit: contain;
-    /*max-height: 400px;*/
-}
-
-.image-container {
-    max-width: 50%;
-    width: 100%;
-}
-
-.image-container, .text-container, .component {
-    max-height: 400px;
-    /*max-width: 580px;*/
-}
-
-
-
-.perfume-image {
-    border-bottom-left-radius: 0.625rem;
-    border-top-left-radius: 0.625rem;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.perfume-title {
-    color: hsl(228, 12%, 48%);
-    font-family: 'Montserrat', sans-serif;
-    font-size: x-small;
-    letter-spacing: 0.3rem;
-}
-
-.perfume-name {
+h1 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    line-height: 2rem;
-    font-size: 1.8rem;
 }
 
-.perfume-description {
-    font-size: small;
+p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    font-size: .875rem;
     color: hsl(228, 12%, 48%);
-    line-height: 1.25rem;
-    margin-bottom: 0;
 }
 
-.large-price {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
+/***************** CARD COMPONENT RULES *****************/
+
+.card-component-container {
+    max-width: 550px;
+    max-height: 400px;
+    display: flex;
+    border-radius: .9375rem;
+    background-color: white;
+}
+
+.image-container, .text-container {
+    min-width: 50%;
+    min-height: 100%;
+}
+
+
+.product-image {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    border-radius: .9735rem 0 0 .9735rem;
+}
+
+
+/***************** TEXT CONTAINER RULES *****************/
+
+
+.text-container{
+    padding: 1.5rem;
+}
+
+.product-category {
+    margin: 0;
+    letter-spacing: .21rem;
+}
+
+.text-container > .product-name {
+    line-height: 2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+.product-prices-container {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+
+.product-prices-container > .old-product-price {
+    padding-left: 1.3rem;
+}
+
+.product-prices-container > * {
+    margin: 0;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    max-height: 50px;
+    background-color:  hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .4375rem;
+    transition: background-color .4s;
+}
+
+.add-to-cart-button:hover {
+    cursor: pointer;
+    background: hsl(158, 42%, 28%);
+    box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, .9);
+}
+
+.add-to-cart-button > .add-to-cart-text {
+    padding-left: .6rem;
+    color: white;
+}
+
+.new-product-price {
     color: hsl(158, 36%, 37%);
 }
 
-.small-price-box{
-    margin: auto;
-}
+/***************** RESPONSIVE *****************/
 
-.small-price {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: hsl(228, 12%, 48%);
-    font-size: small;
-    padding-right: 1.5rem;
-}
-
-.prices {
-    margin-top: 0;
-    display: flex;
-}
-
-button{
-    background-color: hsl(158, 36%, 37%);
-    width:100%;
-    max-height: 50px;
-    min-height: 40px;
-    display:inline-flex;
-    justify-content: center;
-    border: none;
-    align-items: center;
-    color: hsl(0, 0%, 100%);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    border-radius: .625rem;
-}
-
-button >* {
-    padding: .8rem;
-}
-
-@media only screen and (max-width: 500px) {
-    .component {
+@media (max-width: 500px) {
+    .card-component-container {
         flex-flow: column nowrap;
-        /*justify-content: center;*/
-        /*align-items: center;*/
         max-height: 900px;
-        margin: 20px;
-    }
-
-    .component, .text-container, .image-container {
-        max-width: 500px;
-
-    }
-
-    .perfume-image {
-        border-top-right-radius: .0625rem;
-        border-bottom-left-radius: 0;
+        margin: 10px;
     }
 
     .text-container {
-        /*border-bottom-left-radius: .0625rem;*/
+        overflow: scroll;
+    }
+
+    .product-image {
+        border-radius: .9735rem .9735rem 0 0;
+        object-fit: contain;
     }
 }
