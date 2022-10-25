@@ -91,6 +91,7 @@ p{
     min-height: 40px;
     background-color:  hsl(158, 36%, 37%);
     color: white;
+    font-weight: 700;
     border: none;
     display: flex;
     justify-content: center;
