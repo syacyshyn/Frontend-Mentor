@@ -1,0 +1,38 @@
+
+* { box-sizing: border-box
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(225, 100%, 94%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    border: 4px mediumpurple solid;
+
+}
+
+main {
+    width: 350px;
+    max-height: 500px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.order-summary-component-box {
+    border: 4px darkmagenta solid;
+    border-radius: 25px;
+    background-color: white;
+
+
+}
