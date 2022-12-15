@@ -6,31 +6,47 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
   <main>
-    <div class="order-summary-component-box">
-      <img src="images/illustration-hero.svg">
-      <h1>
-        Order Summary
-      </h1>
-      You can now listen to millions of songs, audiobooks, and podcasts on any
-      device anywhere you like!
-
-      Annual Plan
-      $59.99/year
-
-      Change
-
-      Proceed to Payment
-      Cancel Order
+    <div id="order-summary-component-box">
+      <img src="images/illustration-hero.svg" alt="illustration of a dancing cartoon woman with headphones on and music notes surrounding her." width="100%">
+     <div id="text-container">
+        <h1>
+          Order Summary
+        </h1>
+        <p id="main-paragraph">
+          You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!
+        </p>
+        <div id="annual-plan-box">
+          <img src="images/icon-music.svg" alt="music icon" width=50 height=50>
+            <div id="annual-plan-and-price-container">
+                <p id="annual-plan-text">
+                    Annual Plan
+                </p>
+                <p id="price">
+                    $59.99/year
+                </p>
+            </div>
+            <div>
+                <a href="url">
+                    Change
+                </a>
+            </div>
+        </div>
+        <div id="proceed-to-payment-box">
+          Proceed to Payment
+        </div>
+        <div id="cancel-order-text">
+          Cancel Order
+        </div>
+     </div>
     </div>
   </main>
   

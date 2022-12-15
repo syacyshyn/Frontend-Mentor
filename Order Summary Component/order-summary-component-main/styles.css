@@ -11,17 +11,52 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    border: 4px mediumpurple solid;
+    font-family: 'RedHatDisplay', sans-serif;
+    font-weight: 500;
+    margin: 0;
 
 }
 
 main {
-    width: 350px;
-    max-height: 500px;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
+    min-height: 1000px;
     display: flex;
-    margin: auto;
     align-items: center;
+    /*margin: auto;*/
+    /*padding: 4rem;*/
+}
+h1 {
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.4rem;
+    font-family: 'RedHatDisplay', sans-serif;
+    font-weight: 500;
+    color: #597194;
+}
+
+#main-paragraph {
+    line-height: 2rem;
+}
+
+#annual-plan-text {
+    font-weight: 700;
+    padding-bottom: .2rem;
+    margin-bottom: 0;
+    color: black;
+}
+
+#annual-plan-and-price-container {
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 5rem;
+}
+
+#price {
+    padding-top: 0;
+    margin-top: 0;
 }
 
 img {
@@ -29,10 +64,88 @@ img {
     border-top-left-radius: 20px;
 }
 
-.order-summary-component-box {
-    border: 4px darkmagenta solid;
+#annual-plan-box {
+    display: flex;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 7px;
+    margin: auto;
+}
+
+#order-summary-component-box {
     border-radius: 25px;
     background-color: white;
-
-
+    max-width: 500px;
+    min-width: 500px;
+    height: 100%;
+    max-height: 800px;
+    margin: auto;
 }
+
+#text-container {
+    padding: 3rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#proceed-to-payment-box {
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    padding: .8rem;
+    margin-top: 3rem;
+    border-radius: 7px;
+    box-shadow: 5px 10px 8px #597194;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+#cancel-order-text {
+    padding-top: 2rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+a {
+    font-size: 16pt;
+}
+
+
+/******************RESPONSIVE*****************/
+ @media (max-width:500px) {
+     #order-summary-component-box {
+        margin: 10px;
+         max-width: 490px;
+         min-width: 150px;
+         height: 100%;
+     }
+     main {
+        min-width: 150px;
+         max-width: 490px;
+         padding: 1rem;
+     }
+
+     body {
+         height: 100%;
+     }
+
+     #annual-plan-and-price-container {
+         padding-right: 1.5rem;
+     }
+
+     #text-container {
+         padding: 1.5rem;
+     }
+
+     #annual-plan-text {
+         font-size: 1rem;
+     }
+
+     #price {
+         font-size: 1rem;
+     }
+     a {
+         font-size: 1rem;
+     }
+ }
