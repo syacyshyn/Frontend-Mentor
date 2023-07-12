@@ -1,0 +1,103 @@
+.full-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#choose-wisely-component {
+    background-color: lightblue;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#face-off-component {
+    width: 300px;
+    height: 200px;
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win-or-lose-component {
+    width: 300px;
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#win-or-lose-component > h2 {
+    font-size: 50px;
+}
+
+#face-off-component > h2 {
+    font-size: 40px;
+    font-style: italic;
+}
+
+#scoreboard {
+    display: flex;
+    gap: 25px;
+}
+
+.rock-paper-scissors-buttons {
+    border-style: none;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    padding: 8px;
+    margin: 0 5px 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+}
+
+button:hover {
+    background-color: lightsalmon;
+}
+
+h2 {
+    font-family: "Outfit Thin", sans-serif;
+    text-align: center;
+    font-size: medium;
+}
+
+h1 {
+    font-family: "Baskerville Old Face", serif;
+    margin-bottom: 30px;
+}
+
+p {
+    font-family: "Outfit Thin", sans-serif;
+    font-weight: bold;
+}
+
+#rules-button {
+    border-radius: 50%;
+    padding-right: 13px;
+    padding-left: 13px;
+    border-style: none;
+    margin: 8px;
+    align-self: flex-end;
+    background-color: darkorange;
+    color: white;
+    font-size: 12px;
+}
+
+#reload-statement {
+    font-size: 12px;
+    text-align: center;
+}
