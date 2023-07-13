@@ -8,8 +8,8 @@
 
 #choose-wisely-component {
     background-color: lightblue;
-    width: 300px;
-    height: 200px;
+    width: 30rem;
+    height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +17,8 @@
 }
 
 #face-off-component {
-    width: 300px;
-    height: 200px;
+    width: 30rem;
+    height: 10rem;
     background-color: lightsalmon;
     display: flex;
     justify-content: center;
@@ -26,8 +26,8 @@
 }
 
 #win-or-lose-component {
-    width: 300px;
-    height: 200px;
+    width: 30rem;
+    height: 10rem;
     background-color: yellow;
     display: flex;
     justify-content: center;
@@ -37,6 +37,7 @@
 
 #win-or-lose-component > h2 {
     font-size: 50px;
+    margin-bottom: 0;
 }
 
 #face-off-component > h2 {
@@ -61,7 +62,7 @@ button {
     padding: 8px;
     margin: 0 5px 5px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 2rem;
     background-color: white;
 }
 
