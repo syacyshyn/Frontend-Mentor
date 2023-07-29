@@ -93,7 +93,8 @@ for (let individualTile of arrayOfTiles) {
             // Flip the user is not clicking on the same tile over and over
             clickTracker++;
             individualTile.classList.toggle("flipTile180Deg");
-            individualTile.src = `images/${individualTile.id}.jpg`;
+            let lowerCaseTileID = individualTile.id.toLowerCase();
+            individualTile.src = `images/${lowerCaseTileID}.jpg`;
         }
         if (clickTracker === 2) {
             oneRound(previousTileClicked, individualTile);
