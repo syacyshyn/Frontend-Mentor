@@ -21,19 +21,35 @@ function getRandomItem(listOfElements) {
     return listOfElements.pop();
 }
 
+let collectionOfTiles = document.getElementsByClassName("tiles");
+// put collection of tiles elements into a list because collection of tiles is not an array, which we need in order to
+// use .pop() method.
+let arrayOfTiles = [];
+for (let tile of collectionOfTiles) {
+    // Flip all the tiles so the gradient image is actually backwards. We want this so that when a user clicks on the
+    // tile we can flip it another 180 degrees and get the right orientation when an image shows.
+    tile.classList.toggle("flipTile180Deg");
+    arrayOfTiles.push(tile);
+}
+
+//Here we add "hide-on-mobile" to the class list of two html img elements when the screen is below 575px. The
+// "hide-on-mobile" class will give the style "display-none" to those two elements, hiding them on mobile.
+let mediaQuery = window.matchMedia("(max-width: 575px");
+if (mediaQuery.matches) {
+   let firstImageElement = document.getElementById("delete-on-mobile-one");
+   let secondImageElement = document.getElementById("delete-on-mobile-two");
+   firstImageElement.classList.add("hide-on-mobile");
+   secondImageElement.classList.add("hide-on-mobile");
+    paintingsAndArtistsHashmap.delete("Sistine-Chapel");
+    arrayOfTiles.pop();
+    arrayOfTiles.pop();
+}
+
 /**
  * This function loops through a hashmap and assigns each key and value as a new id for randomly generated elements.
  * @param map takes in a hashmap with set keys and values.
  */
 function assignIDs(map) {
-    console.log(arrayOfTiles);
-    for (let i = 0; i < arrayOfTiles.length; i++) {
-        if (arrayOfTiles[i].classList.contains("hide-on-mobile")) {
-            map.delete("Sistine-Chapel");
-            [arrayOfTiles[i], arrayOfTiles[arrayOfTiles.length - 1]] = [arrayOfTiles[arrayOfTiles.length - 1], arrayOfTiles[i]];
-            arrayOfTiles.pop();
-        }
-    }
     for (let keyAndValuePair of map) {
         getRandomItem(arrayOfTiles).id = keyAndValuePair[0];
         getRandomItem(arrayOfTiles).id = keyAndValuePair[1];
@@ -69,17 +85,6 @@ function changeHyphensToSpaces(hyphenatedString) {
     return stringWithSpaces;
 }
 
-let collectionOfTiles = document.getElementsByClassName("tiles");
-// put collection of tiles elements into a list because collection of tiles is not an array, which we need in order to
-// use .pop() method.
-let arrayOfTiles = [];
-for (let tile of collectionOfTiles) {
-    // Flip all the tiles so the gradient image is actually backwards. We want this so that when a user clicks on the
-    // tile we can flip it another 180 degrees and get the right orientation when an image shows.
-    tile.classList.toggle("flipTile180Deg");
-    arrayOfTiles.push(tile);
-}
-
 let clickTracker = 0;
 let previousTileClicked;
 for (let individualTile of arrayOfTiles) {
@@ -100,9 +105,11 @@ for (let individualTile of arrayOfTiles) {
 }
 
 let foundMatchesPTagElement = document.getElementById("found-matches");
-// TODO: implement this
 let currentRound = 1;
 let foundMatches = "";
+
+let playAgainButtonElement = document.getElementById("play-again-button");
+let blurredImages = 0;
 
 function oneRound(firstTileClicked, secondTileClicked) {
     setPointerEventOfElements(collectionOfTiles, "none");
@@ -121,6 +128,17 @@ function oneRound(firstTileClicked, secondTileClicked) {
         setTimeout(function () {
             firstTileClicked.style.filter = "blur(.3rem)";
             secondTileClicked.style.filter = "blur(.3rem)";
+            blurredImages += 2;
+            if (blurredImages === 20) {
+                playAgainButtonElement.style.display = "inline-block";
+                console.log("reached 20");
+            }
+            if (mediaQuery.matches) {
+                if (blurredImages === 18) {
+                    playAgainButtonElement.style.display = "inline-block";
+                    console.log("reached 18");
+                }
+            }
         }, 1500);
     } else {
         setTimeout(function () {
@@ -140,6 +158,10 @@ function oneRound(firstTileClicked, secondTileClicked) {
     if (foundMatches !== undefined) {
         foundMatchesPTagElement.innerText = changeHyphensToSpaces(foundMatches);
     }
+}
+
+playAgainButtonElement.onclick = function () {
+    window.location.reload();
 }
 
 assignIDs(paintingsAndArtistsHashmap);
