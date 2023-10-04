@@ -1,0 +1,128 @@
+body {
+    height: 100vh;
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #079393;
+    align-items: center;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+}
+
+#top-container-of-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#bottom-container-of-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem;
+}
+
+#grid-container {
+    min-width: 18.75rem;
+    max-width: 18.75rem;
+    min-height: 18.75rem;
+    max-height: 18.75rem;
+
+
+    border-radius: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#tic-tac-toe-board {
+    width: 18.75rem;
+}
+
+.individual-score-buttons {
+    color: black;
+    border-radius: .3rem;
+    padding: 8px;
+    box-shadow: 6px 5px 5px #2d3350;
+    font-size: .8rem;
+    text-align: center;
+}
+
+#x-score {
+    background-color: orange;
+}
+
+#tie-score {
+    background-color: lightgray;
+}
+#o-score {
+    background-color: turquoise;
+}
+
+.individual-tic-tac-toe-square {
+    background-color: #354483;
+    min-height: 5.5rem;
+    max-height: 5.5rem;
+    min-width: 5.5rem;
+    max-width: 5.5rem;
+    margin:6px;
+    border-radius: 10px;
+    box-shadow: 6px 5px 5px #2d3350;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+}
+
+#turn-button {
+    background-color: #354483;
+    box-shadow: 6px 5px 5px #2d3350;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    line-height: 2rem;
+}
+
+#x-player-icon {
+    color: orange;
+    font-size: 2.5rem;
+    line-height: 1rem;
+
+}
+
+#o-player-icon {
+    font-size: 2.5rem;
+    color: turquoise;
+    line-height: 1rem;
+}
+
+#refresh-button {
+    background-color: lightgray;
+    box-shadow: 6px 5px 5px #2d3350;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#winner-screen {
+    width: 15.625rem;
+    height: 3.125rem;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 1rem;
+    color: #2d3350;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
