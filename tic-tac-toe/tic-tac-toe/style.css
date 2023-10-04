@@ -83,6 +83,10 @@ body {
     font-size: 4.5rem;
 }
 
+.individual-tic-tac-toe-square:hover {
+    cursor: pointer;
+}
+
 #turn-button {
     background-color: #354483;
     box-shadow: 6px 5px 5px #2d3350;
@@ -112,6 +116,10 @@ body {
     box-shadow: 6px 5px 5px #2d3350;
     padding: 5px;
     border-radius: 5px;
+}
+
+#refresh-button:hover {
+    cursor: pointer;
 }
 
 #winner-screen {
