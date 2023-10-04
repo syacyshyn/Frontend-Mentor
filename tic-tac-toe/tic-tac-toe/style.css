@@ -126,3 +126,43 @@ body {
     align-items: center;
     font-size: 1.8rem;
 }
+
+@media only screen and (min-width: 992px) {
+    #tic-tac-toe-board {
+        width: 30rem;
+    }
+
+    #grid-container {
+        min-width: 30rem;
+        min-height: 30rem;
+    }
+
+    .individual-tic-tac-toe-square {
+        min-width: 9rem;
+        min-height: 9rem;
+    }
+
+    .individual-score-buttons {
+        min-width: 5rem;
+        min-height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    #x-player-icon, #o-player-icon {
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+
+    #turn-button {
+        min-width: 5rem;
+        min-height: 3rem;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    #refresh-button {
+        width: 3rem;
+        height: 3rem;
+        font-size: 3rem;
+    }
+}
